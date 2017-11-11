@@ -29,8 +29,11 @@ class Bola{
   }
   
   void reconhecerColisao(){
-    if(x <= 0 || x >= width){
+    if(x <= raio/2 || x >= width-(raio/2)){
       velocidade_x *= -1;
+    }
+    if(y <= raio/2 || y >= height-(raio/2)){
+      velocidade_y *= -1;
     }
   }
 }
